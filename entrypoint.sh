@@ -28,8 +28,8 @@ check_if_meta_yaml_file_exists() {
 upload_package(){
     conda config --set anaconda_upload yes
     echo $INPUT_ANACONDAUSERNAME
-    md5sum $INPUT_ANACONDAUSERNAME
-    md5sum $INPUT_ANACONDAPASSWORD
+    echo $INPUT_ANACONDAUSERNAME | md5sum
+    echo $INPUT_ANACONDAPASSWORD | md5sum
     anaconda login --username $INPUT_ANACONDAUSERNAME --password $INPUT_ANACONDAPASSWORD
     conda build -c conda-forge conda-recipe
     anaconda logout
