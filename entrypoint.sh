@@ -31,7 +31,7 @@ upload_package(){
     echo $INPUT_ANACONDAUSERNAME | md5sum
     echo $INPUT_ANACONDAPASSWORD | md5sum
     export PASWRD=$INPUT_ANACONDAPASSWORD
-    anaconda login --username intbiotest --password "$PASWRD"
+    anaconda login --username intbiotest --password "$ANACONDA_PASSWORD"
     conda build -c conda-forge conda-recipe
     anaconda logout
 }
