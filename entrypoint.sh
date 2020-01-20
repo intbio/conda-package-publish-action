@@ -32,7 +32,7 @@ upload_package(){
     anaconda logout
 }
 
-go_to_build_dir
+#go_to_build_dir
 check_if_setup_file_exists
 check_if_meta_yaml_file_exists
 upload_package
