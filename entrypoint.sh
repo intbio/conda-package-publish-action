@@ -4,6 +4,8 @@ set -ex
 set -o pipefail
 
 go_to_build_dir() {
+    echo "Input subdir is:"
+    echo $INPUT_SUBDIR
     if [ ! -z $INPUT_SUBDIR ]; then
         cd $INPUT_SUBDIR
     fi
