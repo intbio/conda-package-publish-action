@@ -18,8 +18,4 @@ jobs:
       env:
         ANACONDA_USERNAME: ${{ secrets.ANACONDA_USERNAME }}
         ANACONDA_PASSWORD: ${{ secrets.ANACONDA_PASSWORD }}        
-      with:
-        subDir: '.'
-        AnacondaUsername: ${{ secrets.ANACONDA_PASSWORD }}
-        AnacondaPassword: ${{ secrets.ANACONDA_USERNAME }}
 ```
