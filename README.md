@@ -1,9 +1,10 @@
 # Publish Anaconda Package
 A Github Action to publish your Python package to Anaconda repository.
+This one is modified to be compatible with intbio python package example workflow https://github.com/intbio/pypkg_example
 
 ### Example workflow
 ```yaml
-name: Publish
+name: Publish_to_conda
 
 on: [release]
 
@@ -13,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: publish-to-conda
-      uses: m0nhawk/conda-package-publish-action@master
+      uses: intbio/conda-package-publish-action@master
       with:
         subDir: '.'
         AnacondaUsername: ${{ secrets.ANACONDA_PASSWORD }}
