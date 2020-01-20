@@ -15,6 +15,9 @@ jobs:
     - uses: actions/checkout@master
     - name: publish-to-conda
       uses: intbio/conda-package-publish-action@master
+      env:
+        ANACONDA_USERNAME: ${{ secrets.ANACONDA_USERNAME }}
+        ANACONDA_PASSWORD: ${{ secrets.ANACONDA_PASSWORD }}        
       with:
         subDir: '.'
         AnacondaUsername: ${{ secrets.ANACONDA_PASSWORD }}
