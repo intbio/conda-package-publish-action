@@ -4,14 +4,14 @@ author: 'Andrew Prokhorenkov'
 branding:
   icon: 'package'  
   color: 'purple'
-inputs: 
-  subDir:
-    description: 'Sub-directory with project'
-    default: '.'
-  AnacondaUsername:
-    description: 'Anaconda Username'
-  AnacondaPassword:
-    description: 'Anaconda Password'
+#inputs: 
+#  subDir:
+#    description: 'Sub-directory with project'
+#    default: '.'
+#  AnacondaUsername:
+#    description: 'Anaconda Username'
+#  AnacondaPassword:
+#    description: 'Anaconda Password'
 runs:
   using: 'docker'
   image: 'Dockerfile'
